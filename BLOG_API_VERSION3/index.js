@@ -5,6 +5,8 @@ const path = require('path');
 const blogContoller = require('./controller/blogController');
 const bloginputController = require('./controller/bloginputController');
 const fetchallController = require('./controller/fetchallController');
+const fetchoneController = require('./controller/fetchoneController');
+
 const port = 3000;
 const app = express();
 app.use(bodyParser.json());
@@ -14,6 +16,7 @@ app.use('/',blogContoller);
 // showing the route
 app.use('/bloginput',bloginputController);
 app.use('/fetchall',fetchallController);
+app.use('/fetchone',fetchoneController);
 
 /* load all the static(css,js) file recursively */
 

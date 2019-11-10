@@ -30,6 +30,7 @@ bloginputapp.get('/',(req,res)=>{
 bloginputapp.post('/',(req,res)=>{
     // take the data from post request
     const post = new Post({
+        username:req.body.username,
         content:req.body.content
     });
     // database insert goes here
