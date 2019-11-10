@@ -28,7 +28,13 @@ app.set('view engine', 'html');
 
 
 
-//app.use(bodyParser);
+// using th ebody parser for json encoding
+// you have to use to show how the data is parsed
+app.use(bodyParser.urlencoded({extended:true})); // parse the data
+app.use(bodyParser.json());
+
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
